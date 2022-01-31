@@ -23,10 +23,10 @@
         <img src="/images-2/moon.png" id="moon">
         <img src="/images-2/mountains_behind.png" id="mountains_behind">
         <h2 id="text">dotNet Blazzor</h2>
-        <a href="#" id="btn">Explore</a>
+        <a href="#sec" id="btn">Explore</a>
         <img src="/images-2/mountains_front.png" id="mountains_front">
     </section>
-    <div class="sec">
+    <div class="sec" id="sec">
         <h2>Parallax Scrolling Effects</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae distinctio officia officiis optio! 
         Voluptates, nobis nesciunt cumque illo eaque adipisci dicta voluptas saepe incidunt quae maiores laborum voluptatum. Nulla, impedit.
@@ -70,5 +70,19 @@
         consectetur esse quasi doloremque rem et id eum nesciunt architecto vitae.
         </p>
     </div>
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+        })
+    </script>
 </body>
 </html>
